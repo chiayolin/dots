@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 git clone --bare git@github.com:chiayolin/dots.git $HOME/.dots
 alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
@@ -13,6 +13,6 @@ else
 	dots checkout 2>&1     \
 		| egrep "\s+\."    \
 		| awk {'print $1'} \
-		| xargs -I{} mv {} ._dots_backup/{}
+		| xargs -I{} mv {} _dots_backup/{}
 	dots checkout
 fi
