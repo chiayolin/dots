@@ -16,3 +16,6 @@ fi
 
 # VIM as the default editor
 export EDITOR='vim'
+
+# dotfile alias for git
+alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
