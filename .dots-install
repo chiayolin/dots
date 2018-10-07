@@ -65,6 +65,17 @@
 # are being ignored with .gitignore so no additional flags are needed.
 #
 #
+# NOTES
+# =====
+# This note is just for myself in the future if I forget what my
+# terminal emulator settings were:
+#
+#        * backgroud -> #121212
+#        * foregroud -> #c7c7c7
+#        * font -> Fantasque Sans Mono Regular 13pt
+#        * color set -> iTerm's Dark Backgroud
+#
+#
 # AUTHOR AND LICENSE
 # ==================
 #
