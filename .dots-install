@@ -1,4 +1,89 @@
 #!/bin/sh
+#
+# +---------------------------------------------------------------------+
+# | The comment section contains the "README.md" of this repo b/c don't |
+# | know wehre else to put it without having to track an extra file     |
+# +---------------------------------------------------------------------+
+#
+#
+# WHAT DOES THIS SCRIPT DO
+# ========================
+#
+# This is the installation script for this essential dot files repo.
+#
+# What this script does is basically clone the repo to $HOME where
+# $HOME is the git worktree. And when any dot files from the repo are
+# conflicted with the local machine, they are moved to $HOME/dot_backup
+# folder. Futhermore, an alias `dots` is made so we don't have to
+# specify the git-dir and work-tree every time. (This alias is also in
+# .profile of this repo). To install this these dot files simply curl
+# this script and run it with a shell:
+#
+#         curl -sL https://git.io/dots-install | sh
+#
+# The URL <https://git.io/dots-install> is just an alias to this file
+# on the master branch of this git repo on Github.
+#
+#
+# BUT WHAT ARE ESSENTIAL DOT FILES
+# ================================
+#
+# Essential dot files are just the minimal shell configuration shared
+# across my *NIX machines. These are designed to be highly portable so
+# these shell config are written acording to the POSIX standards. Thus,
+# .bashrc and .zshrc (or basically any other shells) can all source the
+# same .profile and it will work just fine. Other shell specific configs
+# are then written in their respective files (e.g. .bashrc and zshrc).
+#
+# FYI this repo also includes a minimal vim and tmux configs.
+#
+#
+# HOW TO USE THE `DOTS` ALIAS TO MANAGE DOT FILES
+# ===============================================
+#
+# The `dots` alias is fundamentally an alias to git so just use it to
+# track, pull, or push your dot files like how you would use it in a
+# regular git repository. The following are some examples:
+#
+# Add and commit a tracked file:
+#
+#         dots add .vimrc && dots commit -m "add vimrc"
+#
+# Push committed changes to remote:
+#
+#        dots push
+#
+# Track a new file that is previously untracked:
+#
+#        dots add -f .vimrc
+#
+# View the status of tracked files
+#
+#        dots status
+#
+# Note that no untracked files are shown because all other dot files
+# are being ignored with .gitignore so no additional flags are needed.
+#
+#
+# AUTHOR AND LICENSE
+# ==================
+#
+# (c) 2018 Chiayo Lin <cyl@umd.edu>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#
 
 git clone --bare https://github.com/chiayolin/dots.git $HOME/.dots
 alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
