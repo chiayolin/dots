@@ -7,8 +7,7 @@ set backspace=indent,eol,start
 
 colorscheme ron
 
-" 4-spaces tab
-set expandtab
+" display '\t' as 4-spaces.
 set tabstop=4
 set shiftwidth=4
 filetype plugin indent on
