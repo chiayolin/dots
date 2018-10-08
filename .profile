@@ -12,7 +12,7 @@ _dirnow() {
 
 if test $(id -u) -eq 0; then
 	export PS1='$(_dirnow) # '
-else if test -n "$SSH_CONNECTION"; then
+elif test -n "$SSH_CONNECTION"; then
 	export PS1='$(_dirnow) $ '
 else
 	export PS1='$(_dirnow) λ '
