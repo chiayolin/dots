@@ -36,6 +36,6 @@ zle-line-init zle-keymap-select () {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-# fix delete key in vim mode
+# fix delete key in vi-mode
 bindkey "^?" backward-delete-char
 
