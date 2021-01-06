@@ -104,13 +104,14 @@ dots checkout
 if test $? -eq 0; then
   touch $HOME/.env
   echo "$HOME/.env created for local configuration"
-	echo "Checked out dotfiles."
+  echo "Checked out dotfiles."
+
 else
-	echo "Backing up conflicted local dotfiles..."
-	mkdir -p _dots_backup
-	dots checkout 2>&1     \
-		| egrep "\s+\."    \
-		| awk {'print $1'} \
-		| xargs -I{} mv {} _dots_backup/{}
-	dots checkout
+  echo "Backing up conflicted local dotfiles..."
+  mkdir -p _dots_backup
+  dots checkout 2>&1   \
+    | egrep "\s+\."    \
+    | awk {'print $1'} \
+    | xargs -I{} mv {} _dots_backup/{}
+  dots checkout
 fi
