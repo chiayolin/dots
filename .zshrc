@@ -16,13 +16,24 @@ setopt hist_find_no_dups
 
 # remove unnecessary blanks from history
 setopt hist_reduce_blanks
-# The next line updates PATH for the Google Cloud SDK.
 
-if [ -f '/Users/cyl/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/cyl/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# vim, the best editor, mode
+bindkey -v
+bindkey -M viins 'kj' vi-cmd-mode
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/cyl/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/cyl/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/sbin:$PATH"
+# modify prompt for vi-mode
+zle-line-init zle-keymap-select () {
+  case "$KEYMAP" in
+    vicmd ) PS1='$(_dirnow) : ' ;;
+    *     ) PS1='$(_dirnow) λ ' ;;
+  esac
 
-# opam configuration
-test -r /Users/cyl/.opam/opam-init/init.zsh && . /Users/cyl/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# fix delete key in vim mode
+bindkey "^?" backward-delete-char
+
