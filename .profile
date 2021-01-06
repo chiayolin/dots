@@ -30,6 +30,9 @@ alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
 # so tmux can display unicode 'λ' in the prompt
 alias tmux='tmux -u'
 
+# pretty print the path (from @andrewratliff)
+alias path='echo $PATH | tr -s ":" "\n"'
+
 # local env (not backed up)
 source $HOME/.env
 
