@@ -30,7 +30,7 @@ zle-line-init zle-keymap-select () {
     *     ) PS1='$(_dirnow) λ ' ;;
   esac
 
-  zle reset-prompt
+  zle reset-prompt # update prompt using PS1
 }
 
 zle -N zle-line-init
