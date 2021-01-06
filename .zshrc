@@ -22,6 +22,8 @@ bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
 
 # modify prompt for vi-mode
+#   * zle-line-init: execute on new line of input
+#   * zle-keymap-select: execute on keymap change
 zle-line-init zle-keymap-select () {
   case "$KEYMAP" in
     vicmd ) PS1='$(_dirnow) : ' ;;
