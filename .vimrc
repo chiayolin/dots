@@ -5,19 +5,15 @@ set number
 set hlsearch
 set backspace=indent,eol,start
 
-inoremap jh <Esc>
-
-" dracula theme 
-"let g:dracula_colorterm = 0
-"let g:dracula_italic = 0
-"packadd! dracula
+" map kj as escape
+inoremap kj  <Esc>
 
 " gruvbox theme
-let g:gruvbox_italic=0
+set background=dark
+autocmd vimenter * ++nested colorscheme gruvbox
 let g:gruvbox_transparent_bg=1
-colorscheme gruvbox
 
-" display '\t' as 4-spaces, insert 4-spaces on tab
+" display '\t' as 2-spaces, insert 2-spaces on tab
 set tabstop=2
 set shiftwidth=2
 set expandtab
