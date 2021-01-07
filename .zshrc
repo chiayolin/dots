@@ -2,9 +2,9 @@ setopt PROMPT_SUBST # eval subst(s) in PS1
 source $HOME/.profile
 
 # save history
-SAVEHIST=1000
+SAVEHIST=10000
 HISTSIZE=10000
-SAVEHIST=1000
+SAVEHIST=10000
 
 # have to do this again for zsh
 HISTFILE=~/.history
