@@ -21,13 +21,16 @@ setopt hist_reduce_blanks
 bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
 
+# backup current prompt since it is different under ssh (see '.profile')
+_PS1=$PS1
+
 # modify prompt for vi-mode
 #   * zle-line-init: execute on new line of input
-#   * zle-keymap-select: execute on keymap change
+#   * zle-keymap-select: execute on keymap chang
 zle-line-init zle-keymap-select () {
   case "$KEYMAP" in
     vicmd ) PS1='$(_dirnow) : ' ;;
-    *     ) PS1='$(_dirnow) λ ' ;;
+    *     ) PS1=$_PS1           ;; # restore backed-up prompt
   esac
 
   zle reset-prompt # update prompt using PS1
