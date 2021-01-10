@@ -26,7 +26,7 @@ _PS1=$PS1
 
 # modify prompt for vi-mode
 #   * zle-line-init: execute on new line of input
-#   * zle-keymap-select: execute on keymap chang
+#   * zle-keymap-select: execute on keymap change
 zle-line-init zle-keymap-select () {
   case "$KEYMAP" in
     vicmd ) PS1='$(_dirnow) : ' ;;
