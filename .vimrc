@@ -1,11 +1,13 @@
-" map kj as escape
+" map kj as escape, 500ms timeout
 inoremap kj  <Esc>
+set timeoutlen=500
 
 " editor
 syntax on
 set ruler
 set number
 set hlsearch
+set cursorline
 set backspace=indent,eol,start
 
 " display '\t' as 2-spaces, insert 2-spaces on tab
@@ -15,8 +17,9 @@ set expandtab
 set autoindent
 filetype plugin indent on
 
-" set defualt netrw liststyle
-let g:netrw_liststyle = 3
+" netrw configuration
+let g:netrw_liststyle=3
+let g:netrw_menu=0
 
 " gruvbox theme
 set background=dark
