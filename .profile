@@ -24,6 +24,18 @@ export HISTFILE='~/.history'
 # VIM as the default editor
 export EDITOR='vim'
 
+# OS-dependent configs
+case $(uname) in
+  'Darwin')
+    # homebrew sbin path
+    export PATH="/usr/local/sbin:$PATH"
+    ;;
+  'Linux')
+    ;;
+  *)
+    ;;
+esac
+
 # dotfile alias for git
 alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
 
