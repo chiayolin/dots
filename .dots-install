@@ -2,7 +2,7 @@
 #
 # +---------------------------------------------------------------------+
 # | The comment section contains the "README.md" of this repo b/c don't |
-# | know wehre else to put it without having to track an extra file     |
+# | know where else to put it without having to track an extra file     |
 # +---------------------------------------------------------------------+
 #
 #
@@ -33,9 +33,9 @@
 # these shell config are written acording to the POSIX standards. Thus,
 # .bashrc and .zshrc (or basically any other shells) can all source the
 # same .profile and it will work just fine. Other shell specific configs
-# are then written in their respective files (e.g. .bashrc and zshrc).
+# are written in their respective files (e.g. .bashrc and zshrc).
 #
-# FYI this repo also includes a minimal vim and tmux configs.
+# FYI this repo also includes minimal vim and tmux configs.
 #
 #
 # HOW TO USE THE `DOTS` ALIAS TO MANAGE DOT FILES
@@ -47,7 +47,7 @@
 #
 # Add and commit a tracked file:
 #
-#         dots add .vimrc && dots commit -m "add vimrc"
+#        dots add .vimrc && dots commit -m "add vimrc"
 #
 # Push committed changes to remote:
 #
@@ -67,6 +67,7 @@
 #
 # NOTES
 # =====
+#
 # This note is just for myself in the future if I forget what my
 # terminal emulator settings were:
 #
