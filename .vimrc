@@ -20,7 +20,4 @@ filetype plugin indent on
 " netrw configuration
 let g:netrw_liststyle=3
 
-" gruvbox theme
-set background=dark
-autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_transparent_bg=1
+colorscheme codedark
