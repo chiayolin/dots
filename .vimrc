@@ -1,6 +1,6 @@
-" map kj as escape, 500ms timeout
+" map kj as escape, 200ms timeout
 inoremap kj  <Esc>
-set timeoutlen=500
+set timeoutlen=200
 
 " editor
 syntax on
