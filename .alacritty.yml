@@ -52,65 +52,40 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: true
 schemes:
-  vscode: &vscode
+  onedark: &onedark
     # Default colors
     primary:
-      background: '#1e1e1e' #Background from Dark Theme
+      foreground: '0xabb2bf'
+      background: '0x282c34'
+
+    # Cursor colors
+    cursor:
+      text: '0x5c6370'
+      cursor: '0xabb2bf'
 
     # Normal colors
     normal:
-      black:   '#000000'
-      red:     '#cd3131'
-      green:   '#0dbc79'
-      yellow:  '#e5e510'
-      blue:    '#2472c8'
-      magenta: '#bc3fbc'
-      cyan:    '#11a8cd'
-      white:   '#e5e5e5'
+      black:   '0x5c6370'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xe5c07b'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0xabb2bf'
 
     # Bright colors
     bright:
-      black:   '#666666'
-      red:     '#f14c4c'
-      green:   '#23d18b'
-      yellow:  '#f5f543'
-      blue:    '#3b8eea'
-      magenta: '#d670d6'
-      cyan:    '#29b8db'
-      white:   '#e5e5e5'
+      black:   '0x4b5263'
+      red:     '0xbe5046'
+      green:   '0x98c379'
+      yellow:  '0xd19a66'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0x3e4452'
 
-  gruvbox: &gruvbox
-    primary:
-      hard-contrast: &hard '#1d2021'
-      okay-contrast: &okay '#282828'
-      soft-contrast: &soft '#32302f'
-
-      background: *okay
-      foreground: '#ebdbb2'
-
-    # Normal colors
-    normal:
-      black   : '#282828'
-      red     : '#cc241d'
-      green   : '#98971a'
-      yellow  : '#d79921'
-      blue    : '#458588'
-      magenta : '#b16286'
-      cyan    : '#689d6a'
-      white   : '#a89984'
-
-    # Bright colors
-    bright:
-      black   : '#928374'
-      red     : '#fb4934'
-      green   : '#b8bb26'
-      yellow  : '#fabd2f'
-      blue    : '#83a598'
-      magenta : '#d3869b'
-      cyan    : '#8ec07c'
-      white   : '#ebdbb2'
-
-colors: *vscode
+colors: *onedark
   #cursor:
   #  text: CellBackground
   #  cursor: CellForeground
@@ -183,3 +158,4 @@ cursor:
 
   # Print all received window events.
   #print_events: false
+
