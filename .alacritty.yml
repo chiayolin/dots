@@ -35,7 +35,7 @@ font:
     family: *font-family
     #style: Italic
 
-  size: 11.5
+  size: 12
 
   # Offset is the extra space around each character.
   offset:
