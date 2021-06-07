@@ -76,6 +76,13 @@
 #        * font        -> JetBrains Mono NL (size 13)
 #
 #
+# TODO
+# ====
+#
+#        * automate vim setup (i.e. vim-plug, color scheme, etc)
+#        * color scheme based on terminal color support
+#
+#
 # AUTHOR AND LICENSE
 # ==================
 #
