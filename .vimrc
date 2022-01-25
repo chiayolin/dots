@@ -10,7 +10,7 @@ set hlsearch
 set cursorline
 set backspace=indent,eol,start
 
-" display '\t' as 2-spaces, insert 2-spaces on tab
+" display '\t' as 2-spaces, insert spaces on tab
 set tabstop=2
 set shiftwidth=2
 set expandtab

@@ -21,7 +21,7 @@ fi
 # common history file
 export HISTFILE='~/.history'
 
-# VIM as the default editor
+# vim as the default editor
 export EDITOR='vim'
 
 # OS-dependent configs
