@@ -36,6 +36,10 @@ case $(uname) in
     ;;
 esac
 
+# quick exit & clear
+alias e='exit'
+alias c='clear'
+
 # dotfile alias for git
 alias dots='$(which git) --git-dir=$HOME/.dots --work-tree=$HOME'
 
