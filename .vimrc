@@ -18,22 +18,22 @@ set autoindent
 filetype plugin indent on
 
 " vim-plug
-call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-call plug#end()
-
-" color scheme
-if (has("termguicolors"))
-  " tmux color hack from onehalf theme
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-colorscheme onedark
+"call plug#begin('~/.vim/plugged')
+"Plug 'joshdick/onedark.vim'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"call plug#end()
+"
+"" color scheme
+"if (has("termguicolors"))
+"  " tmux color hack from onehalf theme
+"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"  set termguicolors
+"endif
+"
+"colorscheme onedark
 
 " netrw configuration
 let g:netrw_liststyle=3
