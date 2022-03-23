@@ -1,6 +1,6 @@
 [user]
-	email = chiayo.lin@gmail.com
-	name = chiayolin
+	email = cyl@umd.edu
+	name = Chiayo Lin
 [push]
 	default = simple
 [github]
@@ -13,3 +13,5 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[core]
+	editor = vim -f
