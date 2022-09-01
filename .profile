@@ -27,8 +27,13 @@ export EDITOR='vim'
 # OS-dependent configs
 case $(uname) in
   'Darwin')
-    # homebrew sbin path
-    export PATH="/usr/local/sbin:$PATH"
+    # set homebrew path
+    if test $(uname -m) = 'arm64'; then
+      # for apple silicon
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    else
+      export PATH="/usr/local/sbin:$PATH"
+    fi
     ;;
   'Linux')
     ;;
