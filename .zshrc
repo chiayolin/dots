@@ -19,7 +19,7 @@ setopt hist_reduce_blanks
 
 # vim, the best editor, mode
 bindkey -v
-bindkey -M viins 'kj' vi-cmd-mode
+#bindkey -M viins 'kj' vi-cmd-mode
 
 # backup current prompt since it is different under ssh (see '.profile')
 _PS1=$PS1
